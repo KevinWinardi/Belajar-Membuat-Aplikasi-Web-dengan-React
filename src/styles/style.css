@@ -1,0 +1,149 @@
+:root {
+    --primary-color: #ffffff;
+    --secondary-color: #ffe58e;
+}
+
+html {
+    padding: 20px;
+    background-color: var(--primary-color);
+}
+
+* {
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+h3 {
+    font-size: 1.5rem;
+    word-wrap: break-word;
+}
+
+h4 {
+    font-size: 1.25rem;
+    text-align: center;
+}
+
+.note-container {
+    margin: 0 auto;
+}
+
+.note-list {
+    margin-block: 20px;
+}
+
+.note-list__unarchive,
+.note-list__archive {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin-bottom: 20px;
+}
+
+.note-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid gray;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: var(--secondary-color);
+}
+
+.note-item__body{
+    word-wrap: break-word;
+}
+
+.note-item__createdAt {
+    color: gray;
+    margin-top: 5px;
+}
+
+.note-item__button {
+    text-align: end;
+}
+
+.note-item__button__delete,
+.note-item__button__move {
+    color: white;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.note-item__button__delete:hover,
+.note-item__button__move:hover,
+.form__button:hover {
+    cursor: pointer;
+    opacity: 75%;
+    transition: 0.3s ease-in-out;
+    transform: scale(99%);
+}
+
+.note-item__button__delete {
+    background-color: red;
+    margin-left: 5px;
+}
+
+.note-item__button__move {
+    background-color: green;
+}
+
+.form-container__form {
+    margin: 0 auto;
+    border: 1px solid gray;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: transparent;
+    width: 75%;
+}
+
+.form-container__search {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form__input {
+    margin-bottom: 5px;
+}
+
+.form__input__title,
+.form__input__body {
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+.form__input__title > input,
+.form__input__body > textarea,
+.form-container__search > input {
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.form__input__body > textarea {
+    resize: none;
+}
+
+
+.form__button {
+    color: white;
+    background-color: rgb(0, 56, 75);
+    border-radius: 10px;
+    padding: 5px;
+    width: 100%;
+}
